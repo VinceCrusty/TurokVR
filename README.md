@@ -1,4 +1,4 @@
-# Turok VR
+# Turok VR Mod
 
 Turok was one of my favorite games growing up on the Nintendo 64. Ever since I started using VR, I wanted to experience the original game properly in virtual reality, with stereoscopic 3D, roomscale movement, fully tracked weapons, physical interactions, and controls that feel natural in VR. So I eventually started building Turok VR.
 
@@ -19,6 +19,8 @@ The goal is not to turn Turok into a different game, but to keep the original ca
 At this point I have started the game so many times during development that it honestly feels like several thousand launches. I used to love the beginning of the first level. I am not sure I do anymore.
 
 ## Installation
+
+> **Important: Vulkan is required for VR.** Turok VR is built around the Vulkan renderer and does not work with Direct3D. If you previously selected Direct3D in the Video Options, launch Turok in desktop mode first and switch the graphics API back to **Vulkan** before using the VR mod.
 
 Turok VR runs **exclusively through OpenXR**. SteamVR or VDXR can be used as the OpenXR runtime. Make sure your preferred runtime is active before starting the game.
 
@@ -46,7 +48,40 @@ https://www.moddb.com/mods/iddqd-textures/addons/iddqd
 
 Extract the texture pack into the `mods` folder inside your Turok installation directory.
 
-## Feature Overview
+# Feature Overview
+
+## Controller Layout
+
+### Right-Handed
+
+| Input | Left Controller | Right Controller |
+|---|---|---|
+| **Stick** | Move | Turn |
+| **Stick Click** | Position Reset | Crouch |
+| **Trigger** | Previous Weapon | Fire |
+| **Face Button 1** | X: Map | A: Weapon Wheel |
+| **Face Button 2** | Y: Menu | B: Alternate Ammo / Back |
+| **Grip** | Next Weapon | Jump |
+
+**Weapon Wheel:** Left Trigger = Left Shoulder Slot · Right Trigger = Right Shoulder Slot
+
+### Left-Handed
+
+| Input | Left Controller | Right Controller |
+|---|---|---|
+| **Stick** | Turn | Move |
+| **Stick Click** | Crouch | Position Reset |
+| **Trigger** | Fire | Previous Weapon |
+| **Face Button 1** | X: Weapon Wheel | A: Map |
+| **Face Button 2** | Y: Alternate Ammo / Back | B: Menu |
+| **Grip** | Jump | Next Weapon |
+
+**Weapon Wheel:** Left Trigger = Left Shoulder Slot · Right Trigger = Right Shoulder Slot
+
+<a href="https://raw.githubusercontent.com/VinceCrusty/TurokVR/refs/heads/main/Media/Turok_Controls.jpg">
+  <img src="https://raw.githubusercontent.com/VinceCrusty/TurokVR/refs/heads/main/Media/Turok_Controls.jpg" alt="Turok Controls" width="1000"/>
+</a>
+
 
 ## Full VR Conversion
 
@@ -123,6 +158,7 @@ Extract the texture pack into the `mods` folder inside your Turok installation d
 - **Water camera adjustment** - Camera behaviour while swimming can be controlled separately.
 - **Head bobbing control** - Traditional movement-based camera motion can be disabled for a more comfortable VR experience.
 - **Weapon sway control** - Walking sway can be switched independently from other comfort settings.
+- **Weapon Camera Shake** - Enable or disable the rapid camera shake triggered by weapon fire. Turning it off removes the repeated visual kick that occurs with each shot, which can be uncomfortable in VR, especially with fast-firing weapons.
 - **VR-specific defaults** - Settings that tend to cause discomfort or visual problems in VR use safer defaults.
 
 ## Graphics and VR Rendering
@@ -139,6 +175,8 @@ Extract the texture pack into the `mods` folder inside your Turok installation d
 - **Stereo GUI fixes** - Interface elements that previously appeared in only one eye are rendered correctly.
 - **Improved desktop mirror** - A stable left-eye spectator view is shown on the monitor without the previous flickering.
 - **VR resolution presets** - Practical VR resolutions are available from the Video menu and can be applied with a restart.
+
+> **Water reflection warning:** Water reflections are not yet fully correct in VR. Some reflections may contain visual artifacts that do not belong there and can be irritating to the eye. They are usually barely noticeable, but are particularly visible in the water near the beginning of Level 1. I am still working on resolving this issue.
 
 ## Menus and Interface
 

@@ -26,6 +26,8 @@ Turok VR runs **exclusively through OpenXR**. SteamVR or VDXR can be used as the
 
 For the smoothest experience, **120 Hz is recommended in SteamVR or VDXR** if your headset and PC can handle it. Turok's original game logic, physics, enemies, and scripts still run at their safe internal rate of roughly 60 updates per second. The VR mod smooths and interpolates the visible movement between those game states so the headset can still be supplied at 72, 90, or 120 Hz without changing the speed of the game or its physics.
 
+**Virtual Desktop / SSW:** SSW is supported, but may cause brief stutter when a level starts and occasional minor stutter during gameplay. It usually settles after a few seconds, but for the smoothest 120 Hz experience, set SSW to **Disabled**.
+
 No special launch parameters, PowerShell scripts, or external setup tools are required. Copy `vulkan-1.dll`, `turok.assets`, and `steam_appid.txt` into your Turok installation folder and start the game normally through Steam. On the first launch, confirm the installation prompt. Turok VR will install the required files automatically and close the game once so everything can be loaded correctly on the next start.
 
 After that, simply launch Turok normally through Steam again.

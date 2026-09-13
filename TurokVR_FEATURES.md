@@ -1,56 +1,4 @@
-# Turok VR Mod
-
-Turok was one of my favorite games growing up on the Nintendo 64. Ever since I started using VR, I wanted to experience the original game properly in virtual reality, with stereoscopic 3D, roomscale movement, fully tracked weapons, physical interactions, and controls that feel natural in VR. So I eventually started building Turok VR.
-
-The mod is made for the current PC version of Nightdive's Turok, which was upgraded to the KEX4 engine in 2025. Since it directly modifies the running PC game, this is a PCVR only project.
-
-The biggest challenge is that there is no source code or proper documentation available for the game or the KEX4 engine. This makes development much more difficult than working on a normal mod for a well documented engine, an older engine with years of community knowledge, or an open source project where you can simply look at the code and change what you need. A lot of the work has been trial and error, finding out how the game behaves internally and then figuring out how to make VR work without breaking everything else.
-
-The original weapon models were another major problem. They were built for a fixed first person camera and were often heavily incomplete because parts that were never visible on a normal monitor simply did not exist. In VR, where you can freely move and look around the weapon from different angles, many of these models were completely unsuitable.
-
-Because of this, the weapons had to be rebuilt for VR. In many cases the original models were completed and reconstructed while keeping their original proportions, materials, and visual style as closely as possible. Some weapons were so incomplete that rebuilding them was no longer practical, so they were replaced with newly created models designed to stay faithful to the original look and style.
-
-Despite these limitations, most of the major VR systems are now working. This includes full 6DoF head and weapon tracking, roomscale movement, motion controlled aiming, a hand mounted weapon wheel with slow motion selection, shoulder weapon slots, immersive climbing, a hand mounted HUD, full left handed controls, haptic feedback, comfort options, and many VR specific fixes for rendering, menus, weapons, and water.
-
-Some features are still experimental. Immersive climbing can sometimes behave unpredictably, especially when entering or leaving climbable surfaces or moving over ledges. Quicksaving also has limitations because Turok was never really designed for unrestricted quicksaves. Many situations have been tested and several bugs have been fixed, but unusual game states or scripted events can still cause unexpected problems.
-
-The goal is not to turn Turok into a different game, but to keep the original campaign, weapons, enemies, levels, secrets, pacing, and atmosphere intact while making it feel as natural as possible in VR.
-
-At this point I have started the game so many times during development that it honestly feels like several thousand launches. I used to love the beginning of the first level. I am not sure I do anymore.
-
-## Installation
-
-> **Important: Vulkan is required for VR.** Turok VR is built around the Vulkan renderer and does not work with Direct3D. If you previously selected Direct3D in the Video Options, launch Turok in desktop mode first and switch the graphics API back to **Vulkan** before using the VR mod.
-
-Turok VR runs **exclusively through OpenXR**. SteamVR or VDXR can be used as the OpenXR runtime. Make sure your preferred runtime is active before starting the game.
-
-For the smoothest experience, **120 Hz is recommended in SteamVR or VDXR** if your headset and PC can handle it. Turok's original game logic, physics, enemies, and scripts still run at their safe internal rate of roughly 60 updates per second. The VR mod smooths and interpolates the visible movement between those game states so the headset can still be supplied at 72, 90, or 120 Hz without changing the speed of the game or its physics.
-
-**Virtual Desktop / SSW:** SSW is supported, but may cause brief stutter when a level starts and occasional minor stutter during gameplay. It usually settles after a few seconds, but for the smoothest 120 Hz experience, set SSW to **Disabled**.
-
-No special launch parameters, PowerShell scripts, or external setup tools are required. Copy `vulkan-1.dll`, `turok.assets`, and `steam_appid.txt` into your Turok installation folder and start the game normally through Steam. On the first launch, confirm the installation prompt. Turok VR will install the required files automatically and close the game once so everything can be loaded correctly on the next start.
-
-After that, simply launch Turok normally through Steam again.
-
-Default installation folder:
-
-`C:\Program Files (x86)\Steam\steamapps\common\Turok`
-
-All personal VR settings are stored in `TurokVRUser.ini`.
-
-## Recommended HD Texture Pack
-
-Turok has aged quite noticeably in terms of texture quality, even in the remastered PC version. This becomes much more obvious in VR because you can get much closer to walls, objects, weapons, and environmental details than you normally would on a monitor.
-
-For that reason, I strongly recommend using the [iddqd_textures](https://www.moddb.com/mods/iddqd-textures) texture pack. It improves a large number of the original textures while keeping the overall visual style of the game intact.
-
-Download:
-
-https://www.moddb.com/mods/iddqd-textures/addons/iddqd
-
-Extract the texture pack into the `mods` folder inside your Turok installation directory.
-
-# Feature Overview
+# Turok VR - Features
 
 ## Controller Layout
 
@@ -190,8 +138,6 @@ Extract the texture pack into the `mods` folder inside your Turok installation d
 - **Extended Draw Distance** - A new option under `VR Options > Visuals` increases draw distance from the original `DEFAULT (1x)` through `2x` to `7x`, with `MAX (8x)` extending it beyond the game's normally allowed value. Higher settings can reduce performance or cause unexpected issues and should be used with caution.
 - **Updated colour defaults** - The default and `Color Defaults` reset values are Saturation `1.40`, Contrast `1.05`, and Brightness `-0.06`.
 
-> **Draw Distance warning:** Turok's levels were not designed around extremely large draw distances. Increasing the value beyond the original range can reveal geometry, level boundaries, or visual tricks that were intentionally hidden by fog and distance. Areas that were meant to appear bottomless or obscured may suddenly expose floors or other geometry in the distance, which can reduce the intended atmosphere. Higher values may also cause unexpected visual or gameplay issues and reduce performance. Use extended draw distance with caution.
-
 > **Water reflection warning:** Water reflections are not yet fully correct in VR. Some reflections may contain visual artifacts that do not belong there and can be irritating to the eye. They are usually barely noticeable, but are particularly visible in the water near the beginning of Level 1. I am still working on resolving this issue.
 
 ## Menus and Interface
@@ -224,11 +170,10 @@ Each category can be adjusted independently.
 
 ## OpenXR and Runtime Compatibility
 
-- **OpenXR only** - Turok VR requires OpenXR.
-- **Vulkan required** - The game must use the Vulkan graphics API for VR. Direct3D is not supported by the VR mod.
+- **OpenXR only** - Turok VR requires OpenXR and does not support Direct3D rendering.
+- **Vulkan required** - The game must use the Vulkan graphics API for VR.
 - **SteamVR and VDXR** - Both runtimes are supported.
 - **Virtual Desktop support** - Virtual Desktop has been tested, with major VDXR-related performance issues and weapon-wheel problems addressed.
-- **Virtual Desktop SSW** - SSW is supported, but may cause brief stutter when a level starts and occasional minor stutter during gameplay. For the smoothest 120 Hz experience, `Disabled` is recommended.
 
 ## Saving and Quicksaves
 
@@ -241,39 +186,3 @@ Each category can be adjusted independently.
 - **Reliable VR configuration** - User configuration is preserved when reinstalling or updating the mod.
 
 > **Quicksave warning:** Turok was not originally designed around unrestricted quicksaving. Although many situations have been tested and several known problems have been addressed, it is impossible to test every level state, scripted event, boss encounter, bonus area, or unusual gameplay situation. Quicksaving at unexpected moments may therefore cause unforeseen bugs or incorrect game states. Regular save points should still be used whenever possible.
-
-## Configuration and Diagnostics
-
-- **Single user configuration file** - User-adjustable VR settings are collected in `TurokVRUser.ini`.
-- **Custom controller bindings** - VR button assignments can be changed through the configuration.
-- **Optional diagnostic logging** - Set `ActivateLogs=1` under `[Diagnostics]` to generate troubleshooting logs.
-- **Protected internal settings** - Critical VR configuration and resources are contained inside the VR component to reduce accidental configuration problems.
-
-## Installation and Reliability
-
-- **Self-contained VR assets** - VR-specific assets are separated from the original game files.
-- **Automatic component installation** - Required VR components and OpenXR files are installed with the mod.
-- **Uninstaller included** - The VR modification can be removed without manually searching for installed files.
-- **Steam installation handling** - Additional handling allows the game to start correctly even in installations where the original Turok directory has been renamed.
-
-## Original Turok Remains Intact
-
-Turok VR is designed around the original game rather than replacing it.
-
-The complete single-player campaign, enemies, dinosaurs, weapons, keys, artefacts, portals, secrets, cheat menu, bonus stages, boss fights, save system, and classic gameplay remain intact while the presentation and controls are adapted for virtual reality.
-
-## Uninstallation
-
-Close Turok and run `TurokVR-Uninstall.cmd` from the Turok installation folder. Your save games and `TurokVRUser.ini` are preserved.
-
-The original `kexengine.cfg` is backed up once as `kexengine.cfg.pre-turokvr.bak`.
-
-## Bugs, Issues and Feedback
-
-Turok VR modifies a closed source game and engine through reverse engineering, so unexpected behavior can still occur even in areas that appear unrelated to VR.
-
-If you encounter a reproducible problem, please report it through GitHub Issues:
-
-https://github.com/VinceCrusty/TurokVR/issues
-
-When possible, include what you were doing when the problem occurred, the level or area, whether the issue can be reproduced, your OpenXR runtime, your headset, relevant VR settings, and a log created with `ActivateLogs=1` if available.

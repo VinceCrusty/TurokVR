@@ -6,6 +6,8 @@ This changelog is a cleaned-up version of the original development notes. Items 
 
 ### Visuals and Rendering
 
+- Added new toggle **classic** in HUD-Options
+  - ON (hand-mounted HUD), CLASSIC (a smaller, head-locked version of the original HUD, and OFF
 - Added a new **Draw Distance** option under **VR Options > Visuals**.
   - `DEFAULT` uses the original `1x` draw distance.
   - Additional levels increase draw distance from `2x` through `7x`.

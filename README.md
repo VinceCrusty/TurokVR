@@ -126,7 +126,7 @@ Extract the texture pack into the `mods` folder inside your Turok installation d
 - **Optional off hand** - The tracked off-hand representation can be enabled or disabled separately.
 - **VR climbing hands** - Dedicated HD hands appear while climbing while weapons are hidden.
 - **Hand-mounted HUD** - Health, ammunition, lifeforce, lives, and other status information can be displayed directly on the off hand.
-- **HUD toggle** - The hand-mounted HUD can be completely enabled or disabled.
+- **HUD toggle** - The VR HUD can be switched between three modes: ON (hand-mounted HUD), CLASSIC (a smaller, head-locked version of the original HUD near the lower-left of the view), and OFF (completely disabled).
 - **Automatic pause handling** - Weapon, off hand, and wrist HUD are hidden automatically while the Pause Menu is open.
 - **Cutscene hand hiding** - Tracked hands are hidden during cutscenes.
 - **Improved off-hand stability** - Off-hand positioning has been improved while crouching, landing after jumps, moving, changing direction, starting a game, and loading between sections.

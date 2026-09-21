@@ -2,6 +2,30 @@
 
 This changelog is a cleaned-up version of the original development notes. Items are grouped by development phase and topic for readability.
 
+## Development Phase 6 - 2026-09-17
+
+### HUD and VR Options
+
+- Fixed the **Classic HUD** being incorrectly positioned and mirrored in left-handed mode.
+- Enabled the **Y button** as **Back** inside the VR Options menus.
+
+### Weapons and Support Hand
+
+- Recalibrated and optimized the proximity zones used for attaching the off hand to weapons.
+- Added **Trigger-based support-hand attachment**:
+  - Hold Trigger to attach the off hand to a compatible weapon.
+  - Release Trigger to detach it again.
+  - Normal Trigger weapon switching is temporarily disabled while the support hand is attached.
+- The attached off hand can now also influence and move the weapon, making two-handed handling feel more natural.
+- Fixed a weapon-state issue when switching between the **Tomahawk / Knife** and the **Bow**, where the weapon state could incorrectly reset to `0`.
+
+### Immersive Climbing
+
+- Added wall collision checks to immersive climbing.
+- Increased the release/fall threshold slightly so the player does not need to re-grab the wall as quickly during immersive climbing.
+
+---
+
 ## Development Phase 5 - 2026-09-02
 
 ### Visuals and Rendering

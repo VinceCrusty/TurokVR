@@ -80,6 +80,8 @@ Extract the texture pack into the `mods` folder inside your Turok installation d
 
 **Weapon Wheel:** Left Trigger = Left Shoulder Slot · Right Trigger = Right Shoulder Slot
 
+**Context-sensitive Trigger:** When the off hand is attached to a weapon, Trigger holds/releases the immersive support-hand grip and normal Trigger weapon switching is temporarily disabled.
+
 <a href="https://raw.githubusercontent.com/VinceCrusty/TurokVR/refs/heads/main/Media/Turok_Controls.jpg">
   <img src="https://raw.githubusercontent.com/VinceCrusty/TurokVR/refs/heads/main/Media/Turok_Controls.jpg" alt="Turok Controls" width="1000"/>
 </a>
@@ -120,13 +122,15 @@ Extract the texture pack into the `mods` folder inside your Turok installation d
 
 - **Complete left-handed mode** - Swaps weapon hand, movement and turning controls, button roles, menus, HUD placement, and weapon behaviour.
 - **Weapon hand display options** - Choose between no weapon hands, both hands, right-hand-only presentation, or immersive support-hand behaviour.
-- **Immersive support hand** - Move the off hand toward a compatible weapon to attach it naturally to the weapon.
+- **Immersive support hand** - Move the off hand into the calibrated attachment area and hold Trigger to attach it to a compatible weapon. Release Trigger to detach it again. Normal Trigger weapon switching is temporarily disabled while the support hand is attached.
 - **Immersive support hand for left-handed mode** - Weapon-hand models are mirrored for left-handed play, allowing immersive support-hand attachment to work in left-handed mode as well.
+- **Two-handed weapon handling** - While the support hand is attached, moving the off hand also influences the weapon position and orientation for more natural two-handed control.
 - **Hide HUD on Immersive Grip** - Enabled by default. The wrist HUD is automatically hidden while the immersive support hand is attached to a weapon.
 - **Optional off hand** - The tracked off-hand representation can be enabled or disabled separately.
 - **VR climbing hands** - Dedicated HD hands appear while climbing while weapons are hidden.
 - **Hand-mounted HUD** - Health, ammunition, lifeforce, lives, and other status information can be displayed directly on the off hand.
 - **HUD toggle** - The VR HUD can be switched between three modes: ON (hand-mounted HUD), CLASSIC (a smaller, head-locked version of the original HUD near the lower-left of the view), and OFF (completely disabled).
+- **Left-handed Classic HUD support** - The fixed Classic HUD is correctly positioned and mirrored for left-handed mode.
 - **Automatic pause handling** - Weapon, off hand, and wrist HUD are hidden automatically while the Pause Menu is open.
 - **Cutscene hand hiding** - Tracked hands are hidden during cutscenes.
 - **Improved off-hand stability** - Off-hand positioning has been improved while crouching, landing after jumps, moving, changing direction, starting a game, and loading between sections.
@@ -147,6 +151,8 @@ Extract the texture pack into the `mods` folder inside your Turok installation d
 - **Normal climbing** - Move yourself upward through natural controller movement.
 - **Fast climbing** - Stronger upward controller motions can be used for faster climbing.
 - **Automatic wall locking** - Optional assistance helps keep the player attached to climbable surfaces.
+- **Collision-aware immersive climbing** - Immersive climbing now checks wall collision to keep grabbing behaviour better aligned with the actual climbable surface.
+- **More forgiving grip release** - The fall/release threshold is slightly increased so you do not need to re-grab the wall as quickly while climbing.
 - **Ledge handling** - Reaching the top of a climbable wall attempts to transition the player cleanly onto the platform.
 - **Natural detaching** - Release the wall, move away from it, or jump to detach.
 - **Weapon handling while climbing** - Weapons are hidden and dedicated climbing hands are shown.
@@ -198,6 +204,7 @@ Extract the texture pack into the `mods` folder inside your Turok installation d
 
 - **Dedicated VR Options menu** - VR settings are organized into logical Weapons, Controls, Visuals, Comfort, and related categories.
 - **Controller-driven menus** - Menus can be operated completely from the VR controllers.
+- **VR Options Back control** - The Y button can be used as Back inside the VR Options menus.
 - **VR menu pointer** - A tracked pointer provides mouse-like menu interaction from inside the headset.
 - **VR-scaled menus** - Pause and other menus have been repositioned and resized for headset viewing.
 - **VR-adjusted cheat menu** - The original cheat interface remains available and is aligned correctly in VR.

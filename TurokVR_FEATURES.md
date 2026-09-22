@@ -78,6 +78,7 @@
 - **VR climbing hands** - Dedicated HD hands appear while climbing while weapons are hidden.
 - **Hand-mounted HUD** - Health, ammunition, lifeforce, lives, and other status information can be displayed directly on the off hand.
 - **HUD toggle** - The VR HUD can be switched between three modes: ON (hand-mounted HUD), CLASSIC (a smaller, head-locked version of the original HUD near the lower-left of the view), and OFF (completely disabled).
+- **HUD Adjust** - A new option under `VR Options > Visuals` lets you adjust the position and angle of the Classic HUD. Separate settings are stored for right-handed and left-handed mode.
 - **Left-handed Classic HUD support** - The fixed Classic HUD is correctly positioned and mirrored for left-handed mode.
 - **Automatic pause handling** - Weapon, off hand, and wrist HUD are hidden automatically while the Pause Menu is open.
 - **Cutscene hand hiding** - Tracked hands are hidden during cutscenes.

@@ -2,11 +2,34 @@
 
 This changelog is a cleaned-up version of the original development notes. Items are grouped by development phase and topic for readability.
 
+## Development Phase 7 - 2026-09-22
+
+### Classic HUD and Visuals
+
+- Added **HUD Adjust** under **VR Options > Visuals**.
+  - Allows the user to adjust the position and angle of the Classic HUD.
+  - Separate calibration values are stored for right-handed and left-handed mode.
+- Mirrored the required Classic HUD elements for left-handed mode.
+- Manually recalibrated the Classic HUD position and orientation for both right-handed and left-handed mode.
+
+### Menus and UI
+
+- Fixed a menu highlight bug where the selection bar could be shifted down by one row after returning from the VR Options menu.
+
+### Startup and OpenXR
+
+- Fixed an approximately five-second stutter/freeze in Turok's Main Menu during startup.
+  - The VR DLL was performing the same OpenXR runtime handshake twice during initialization.
+  - The duplicate handshake has been removed.
+
+---
+
 ## Development Phase 6 - 2026-09-17
 
 ### HUD and VR Options
 
 - Fixed the **Classic HUD** being incorrectly positioned and mirrored in left-handed mode.
+- Fixed roomscale handling for the **Classic HUD**, which now follows physical roomscale movement correctly.
 - Enabled the **Y button** as **Back** inside the VR Options menus.
 
 ### Weapons and Support Hand
@@ -18,6 +41,8 @@ This changelog is a cleaned-up version of the original development notes. Items 
   - Normal Trigger weapon switching is temporarily disabled while the support hand is attached.
 - The attached off hand can now also influence and move the weapon, making two-handed handling feel more natural.
 - Fixed a weapon-state issue when switching between the **Tomahawk / Knife** and the **Bow**, where the weapon state could incorrectly reset to `0`.
+- Fixed roomscale handling for weapons and the off hand so both now follow physical roomscale movement correctly.
+- Fixed the crosshair while using two-handed weapon handling in roomscale, keeping aiming aligned correctly when the support hand is attached.
 
 ### Immersive Climbing
 

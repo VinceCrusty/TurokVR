@@ -16,6 +16,18 @@ This changelog is a cleaned-up version of the original development notes. Items 
 
 - Fixed a menu highlight bug where the selection bar could be shifted down by one row after returning from the VR Options menu.
 
+### Weapons and Two-Handed Handling
+
+- Increased the left/right hand spacing on the **Fusion Cannon**, **Grenade Launcher**, and **Rocket Launcher** models.
+  - The original support-hand positions were too close together, making the weapons difficult to control in two-handed mode.
+- Added **Z-axis movement** to two-handed weapon handling with the off hand.
+  - The Z axis was previously locked while two-handed handling was active.
+
+### Roomscale
+
+- Fixed projectile orientation during roomscale rotation.
+  - Projectiles and weapon billboards were not rotating correctly with the player's roomscale orientation, which could eventually make them appear invisible.
+
 ### Startup and OpenXR
 
 - Fixed an approximately five-second stutter/freeze in Turok's Main Menu during startup.
@@ -340,7 +352,7 @@ ActivateLogs=1
 
 ### Installation
 
-- Added automatic extraction of the OpenXR DLL and VR assets.
+- Added automatic extraction of the OpenxR DLL and VR assets.
 - Added an uninstaller.
 - Added automatic installation from the `turok.assets` archive.
 - Configured VR defaults on first start.
@@ -384,7 +396,7 @@ ActivateLogs=1
 - Added stereoscopic 3D.
 - Added full 6DoF head tracking.
 - Added 6DoF motion-controlled weapons.
-- Added OpenXR support using the Vulkan renderer.
+- Added OpenxR support using the Vulkan renderer.
 - Added roomscale movement.
 - Added head-oriented movement direction.
 - Added smooth analog locomotion instead of the original digital-style movement.

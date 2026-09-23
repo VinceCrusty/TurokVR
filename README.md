@@ -60,10 +60,10 @@ Extract the texture pack into the `mods` folder inside your Turok installation d
 |---|---|---|
 | **Stick** | Move | Turn |
 | **Stick Click** | Position Reset | Crouch |
-| **Trigger** | Previous Weapon | Fire |
+| **Trigger** | Previous Weapon / Grab Weapon | Fire |
 | **Face Button 1** | X: Map | A: Weapon Wheel |
 | **Face Button 2** | Y: Menu | B: Alternate Ammo / Back |
-| **Grip** | Next Weapon | Jump |
+| **Grip** | Next Weapon / Grab Weapon | Jump |
 
 **Weapon Wheel:** Left Trigger = Left Shoulder Slot · Right Trigger = Right Shoulder Slot
 
@@ -73,12 +73,14 @@ Extract the texture pack into the `mods` folder inside your Turok installation d
 |---|---|---|
 | **Stick** | Turn | Move |
 | **Stick Click** | Crouch | Position Reset |
-| **Trigger** | Fire | Previous Weapon |
+| **Trigger** | Fire | Previous Weapon / Grab Weapon |
 | **Face Button 1** | X: Weapon Wheel | A: Map |
 | **Face Button 2** | Y: Alternate Ammo / Back | B: Menu |
-| **Grip** | Jump | Next Weapon |
+| **Grip** | Jump | Next Weapon / Grab Weapon |
 
 **Weapon Wheel:** Left Trigger = Left Shoulder Slot · Right Trigger = Right Shoulder Slot
+
+**Grab Weapon:** In right-handed mode, use the **left Grip or Trigger** to attach the off hand to a compatible weapon. In left-handed mode, use the **right Grip or Trigger**. Release the button to detach the hand again. While attached, the off hand also helps move and orient the weapon for two-handed handling.
 
 **Context-sensitive Trigger:** When the off hand is attached to a weapon, Trigger holds/releases the immersive support-hand grip and normal Trigger weapon switching is temporarily disabled.
 
@@ -122,9 +124,8 @@ Extract the texture pack into the `mods` folder inside your Turok installation d
 
 - **Complete left-handed mode** - Swaps weapon hand, movement and turning controls, button roles, menus, HUD placement, and weapon behaviour.
 - **Weapon hand display options** - Choose between no weapon hands, both hands, right-hand-only presentation, or immersive support-hand behaviour.
-- **Immersive support hand** - Move the off hand into the calibrated attachment area and hold Trigger to attach it to a compatible weapon. Release Trigger to detach it again. Normal Trigger weapon switching is temporarily disabled while the support hand is attached.
+- **Immersive support hand** - Move the off hand into the calibrated attachment area and use **Grip or Trigger** to attach it to a compatible weapon. In right-handed mode this uses the left controller, while left-handed mode uses the right controller. Release the button to detach. While attached, the off hand also influences weapon position and orientation for natural two-handed handling.
 - **Immersive support hand for left-handed mode** - Weapon-hand models are mirrored for left-handed play, allowing immersive support-hand attachment to work in left-handed mode as well.
-- **Two-handed weapon handling** - While the support hand is attached, moving the off hand also influences the weapon position and orientation for more natural two-handed control.
 - **Hide HUD on Immersive Grip** - Enabled by default. The wrist HUD is automatically hidden while the immersive support hand is attached to a weapon.
 - **Optional off hand** - The tracked off-hand representation can be enabled or disabled separately.
 - **VR climbing hands** - Dedicated HD hands appear while climbing while weapons are hidden.
